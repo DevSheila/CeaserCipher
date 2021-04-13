@@ -27,18 +27,22 @@ public class App {
                     System.out.print("PLease enter  Key between 1 and 25");
                     int shiftKey = Integer.parseInt(bufferedReader.readLine());
 
-                    Ceasar msgCeasar = new Ceasar(originalMessage,shiftKey);
-                    EncryptClass msgEncrypt = new EncryptClass();
-                    Decrypt msgDecrypt =new Decrypt();
+                    if(shiftKey>0 && shiftKey<26){
+                        Ceasar msgCeasar = new Ceasar(originalMessage,shiftKey);
+                        EncryptClass msgEncrypt = new EncryptClass();
+                        Decrypt msgDecrypt =new Decrypt();
 
-                    msgEncrypt.EncryptMessage(msgCeasar.getMessage(), msgCeasar.getShiftKey());
-                    msgDecrypt.decryptMessage(msgEncrypt.getEncryptedMessage(),msgCeasar.getShiftKey() );
+                        msgEncrypt.EncryptMessage(msgCeasar.getMessage(), msgCeasar.getShiftKey());
+                        msgDecrypt.decryptMessage(msgEncrypt.getEncryptedMessage(),msgCeasar.getShiftKey() );
 
-                    System.out.println("Input Message :"+ originalMessage);
-                    System.out.println("Encrypted Message :"+msgEncrypt.getEncryptedMessage() );
+                        System.out.println("Input Message :"+ originalMessage);
+                        System.out.println("Encrypted Message :"+msgEncrypt.getEncryptedMessage() );
 
-                    System.out.println("Decrypted Message :"+msgDecrypt.getDecryptedMessage() );
+                        System.out.println("Decrypted Message :"+msgDecrypt.getDecryptedMessage() );
+                    }else{
+                        System.out.println(" Key Must be between 1 and 25");
 
+                    }
 
                 }else {
                     System.out.println("Invalid Choice please try again");
