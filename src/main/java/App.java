@@ -29,13 +29,15 @@ public class App {
 
                     Ceasar msgCeasar = new Ceasar(originalMessage,shiftKey);
                     EncryptClass msgEncrypt = new EncryptClass();
-
+                    Decrypt msgDecrypt =new Decrypt();
 
                     msgEncrypt.EncryptMessage(msgCeasar.getMessage(), msgCeasar.getShiftKey());
-
+                    msgDecrypt.decryptMessage(msgEncrypt.getEncryptedMessage(),msgCeasar.getShiftKey() );
 
                     System.out.println("Input Message :"+ originalMessage);
                     System.out.println("Encrypted Message :"+msgEncrypt.getEncryptedMessage() );
+
+                    System.out.println("Decrypted Message :"+msgDecrypt.getDecryptedMessage() );
 
 
                 }else {
