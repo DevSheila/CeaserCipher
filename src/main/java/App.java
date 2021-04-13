@@ -73,15 +73,13 @@ public class App {
 
                             System.out.println("Decrypted Message :"+msgDecrypt.getDecryptedMessage() );
                         }
-//                            System.out.println("Input Message :"+ originalMessage);
-
                     }else{
                         System.out.println(" Key Must be between 1 and 25");
-
                     }
 
-
-
+                }else if(choice.equals("C")) {
+                    System.out.println("Successful Exit");
+                    runningProgram = false;
                 }else {
                     System.out.println("Invalid Choice please try again");
                 }
