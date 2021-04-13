@@ -54,4 +54,12 @@ public class TestEncrypt {
         assertEquals(expectedOutput,testEncrypt.getEncryptedMessage());
 
     }
+    @Test
+    public void newDecrypt_decryptsEncryptedMessage(){
+        Decrypt testDecrypt = new Decrypt();
+        String output = testDecrypt.decryptMessage("AI EXXEGO EX HEAR",4);
+        String expectedOutput = "WE ATTACK AT DAWN";
+        assertEquals(expectedOutput,output);
+
+    }
 }
