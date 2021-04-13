@@ -26,4 +26,16 @@ public class TestEncrypt {
         App newApp = new App();
         assertEquals(true, newApp instanceof App);
     }
+    @Test
+    public void newCeasar_getMessage(){
+        Ceasar testCeasar = new Ceasar("we attack at dawn", 4);
+        assertEquals("we attack at dawn" ,testCeasar.getMessage());
+
+    }
+    @Test
+    public void newCeasar_getShiftKey(){
+        Ceasar testCeasar = new Ceasar("we attack at dawn", 4);
+        assertEquals(4 ,testCeasar.getShiftKey());
+
+    }
 }
