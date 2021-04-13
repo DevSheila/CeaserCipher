@@ -38,4 +38,12 @@ public class TestEncrypt {
         assertEquals(4 ,testCeasar.getShiftKey());
 
     }
+    @Test
+    public void newEncrypt_encryptsOriginalMessage(){
+        EncryptClass testEncrypt = new EncryptClass();
+        String output = testEncrypt.EncryptMessage("we attack at dawn",4);
+        String expectedOutput = "AI EXXEGO EX HEAR";
+        assertEquals(expectedOutput,output);
+
+    }
 }
