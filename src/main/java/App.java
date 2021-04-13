@@ -57,8 +57,10 @@ public class App {
 
 
 
-                        while((line = reader.readLine()) != null) {
+                    if(shiftKey>0 && shiftKey<26){
 
+
+                        while((line = reader.readLine()) != null) {
                             Ceasar msgCeasar = new Ceasar(line,shiftKey);
                             EncryptClass msgEncrypt = new EncryptClass();
                             Decrypt msgDecrypt =new Decrypt();
@@ -70,10 +72,13 @@ public class App {
                             System.out.println("Encrypted Message :"+msgEncrypt.getEncryptedMessage() );
 
                             System.out.println("Decrypted Message :"+msgDecrypt.getDecryptedMessage() );
-
-
                         }
+//                            System.out.println("Input Message :"+ originalMessage);
 
+                    }else{
+                        System.out.println(" Key Must be between 1 and 25");
+
+                    }
 
 
 
