@@ -13,6 +13,40 @@ public class App {
             System.out.println("A. Encrypt And Decrypt Message");
             System.out.println("B. Encrypt And Decrypt File");
             System.out.println("C. Exit");
+            try{
+
+
+                String choice = bufferedReader.readLine();
+                System.out.println(choice);
+
+                if(choice.equals("A")){
+
+                    System.out.print("PLease enter your message");
+                    String originalMessage = bufferedReader.readLine();
+
+                    System.out.print("PLease enter  Key between 1 and 25");
+                    int shiftKey = Integer.parseInt(bufferedReader.readLine());
+
+                    Ceasar msgCeasar = new Ceasar(originalMessage,shiftKey);
+                    EncryptClass msgEncrypt = new EncryptClass();
+
+
+                    msgEncrypt.EncryptMessage(msgCeasar.getMessage(), msgCeasar.getShiftKey());
+
+
+                    System.out.println("Input Message :"+ originalMessage);
+                    System.out.println("Encrypted Message :"+msgEncrypt.getEncryptedMessage() );
+
+
+                }else {
+                    System.out.println("Invalid Choice please try again");
+                }
+
+
+
+            }catch(IOException e){
+                e.printStackTrace();
+            }
         }
     }
 }
