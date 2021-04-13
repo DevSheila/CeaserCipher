@@ -7,7 +7,7 @@ public class App {
         System.out.println("Welcome To Ceasar Cipher!");
         boolean runningProgram = true;
 
-        while (runningProgram) {
+        while(runningProgram){
             System.out.println("**---------------------------------------------------------**");
             System.out.println("Enter A, B or C to choose one of the following options");
             System.out.println("A. Encrypt And Decrypt Message");
@@ -43,6 +43,29 @@ public class App {
                         System.out.println(" Key Must be between 1 and 25");
 
                     }
+                }else if(choice.equals("B")){
+                    System.out.println("Enter File Path.Example D://data.txt");
+                    String filePath = bufferedReader.readLine();
+                    System.out.print("PLease enter  Key between 1 and 25");
+                    int shiftKey = Integer.parseInt(bufferedReader.readLine());
+
+
+
+                    File file = new File(filePath);
+                    BufferedReader reader = new BufferedReader(new FileReader(file));
+                    String line;
+
+
+
+                        while((line = reader.readLine()) != null) {
+
+
+                            System.out.println("FILE ORIGINAL CONTENT: " + line);
+
+                        }
+
+
+
 
                 }else {
                     System.out.println("Invalid Choice please try again");
