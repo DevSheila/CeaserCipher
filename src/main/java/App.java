@@ -59,8 +59,18 @@ public class App {
 
                         while((line = reader.readLine()) != null) {
 
+                            Ceasar msgCeasar = new Ceasar(line,shiftKey);
+                            EncryptClass msgEncrypt = new EncryptClass();
+                            Decrypt msgDecrypt =new Decrypt();
+
+                            msgEncrypt.EncryptMessage(msgCeasar.getMessage(), msgCeasar.getShiftKey());
+                            msgDecrypt.decryptMessage(msgEncrypt.getEncryptedMessage(),msgCeasar.getShiftKey() );
 
                             System.out.println("FILE ORIGINAL CONTENT: " + line);
+                            System.out.println("Encrypted Message :"+msgEncrypt.getEncryptedMessage() );
+
+                            System.out.println("Decrypted Message :"+msgDecrypt.getDecryptedMessage() );
+
 
                         }
 
