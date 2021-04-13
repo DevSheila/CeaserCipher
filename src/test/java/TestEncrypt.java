@@ -46,4 +46,12 @@ public class TestEncrypt {
         assertEquals(expectedOutput,output);
 
     }
+    @Test
+    public void newEncrypt_getMessage(){
+        EncryptClass testEncrypt = new EncryptClass();
+        testEncrypt.EncryptMessage("we attack at dawn",4);
+        String expectedOutput = "AI EXXEGO EX HEAR";
+        assertEquals(expectedOutput,testEncrypt.getEncryptedMessage());
+
+    }
 }

@@ -29,4 +29,7 @@ public class EncryptClass {
 
         return encryptedMessage.toString();
     }
+    public String getEncryptedMessage(){
+        return encryptedMessage.toString();
+    }
 }
