@@ -30,4 +30,8 @@ public class Decrypt {
 
         return decryptedMessage.toString();
     }
+    public String getDecryptedMessage(){
+        return decryptedMessage.toString();
+    }
+
 }
